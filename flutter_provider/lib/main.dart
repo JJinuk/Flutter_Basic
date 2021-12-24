@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: ChangeNotifierProvider(
-        create: (BuildContext context) => CountPorovider(),
+        create: (BuildContext context) => CountProvider(),
         child: Home(), // child 하위에 있는 위젯들은 count_provider에 접근 가능하게 됨
       ),
     );
