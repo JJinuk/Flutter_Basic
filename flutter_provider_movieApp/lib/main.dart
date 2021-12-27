@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider/src/home.dart';
+import 'package:flutter_provider/src/provider/bottom_navigation_provider.dart';
 import 'package:flutter_provider/src/provider/count_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -23,8 +24,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ChangeNotifierProvider(
-        create: (BuildContext context) => CountProvider(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (BuildContext context) => CountProvider()),
+          ChangeNotifierProvider(create: (BuildContext context) => BottomNavigationProvider()),
+        ],
+      
         child: Home(), // child 하위에 있는 위젯들은 count_provider에 접근 가능하게 됨
       ),
     );

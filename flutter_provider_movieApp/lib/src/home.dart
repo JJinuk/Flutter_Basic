@@ -1,17 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider/src/provider/bottom_navigation_provider.dart';
 import 'package:flutter_provider/src/provider/count_provider.dart';
 import 'package:flutter_provider/src/ui/count_home_widget.dart';
+import 'package:flutter_provider/src/ui/movie_list_widget.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
+  // BottomNavigationProvider _bottomNavigationProvider;
 
   @override
   Widget build(BuildContext context) {
-    CountProvider countProvider =
-        Provider.of<CountProvider>(context, listen: false);
+    BottomNavigationProvider bottomNavigationBar =
+        Provider.of<BottomNavigationProvider>(context);
 
     Widget _navigationBody() {
+      switch (bottomNavigationBar.currentPage) {
+        case 0:
+          return CountHomeWidget();
+          break;
+        case 1:
+          return MovieListWidget();
+          break;
+      }
       return Container();
     }
 
@@ -21,35 +32,18 @@ class Home extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Movie"),
         ],
-        currentIndex: 0,
+        currentIndex: bottomNavigationBar.currentPage,
         selectedItemColor: Colors.red,
         onTap: (index) {
+          bottomNavigationBar.updateCurrentPage(index);
           // provider navigation state;
         },
       );
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Provider Sample'),
-      ),
       body: _navigationBody(),
       bottomNavigationBar: _bottomNavigationBarWidget(),
     );
   }
 }
-
-
-      // floatingActionButton: Row(
-      //   mainAxisAlignment: MainAxisAlignment.end,
-      //   children: [
-      //     IconButton(
-      //       onPressed: () => countProvider.add(),
-      //       icon: Icon(Icons.add),
-      //     ),
-      //     IconButton(
-      //       onPressed: () => countProvider.remove(),
-      //       icon: Icon(Icons.remove),
-      //     ),
-      //   ],
-      // ),
