@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_provider/src/home.dart';
 import 'package:flutter_provider/src/provider/bottom_navigation_provider.dart';
 import 'package:flutter_provider/src/provider/count_provider.dart';
+import 'package:flutter_provider/src/provider/movie_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -28,6 +29,8 @@ class MyApp extends StatelessWidget {
         providers: [
           ChangeNotifierProvider(create: (BuildContext context) => CountProvider()),
           ChangeNotifierProvider(create: (BuildContext context) => BottomNavigationProvider()),
+          ChangeNotifierProvider(create: (BuildContext context) => MovieProvider()),
+
         ],
       
         child: Home(), // child 하위에 있는 위젯들은 count_provider에 접근 가능하게 됨
