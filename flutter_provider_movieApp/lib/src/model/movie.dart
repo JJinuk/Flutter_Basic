@@ -12,4 +12,5 @@ class Movie {
       title: json["title"] as String,
     );
   }
+  String get posterUrl => "https://image.tmdb.org/t/p/w500/${this.posterPath}";
 }

@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 class MovieRepository {
   // api서버 호출 -> 값 받아오기
   // http통신
-  Future<List<Movie>> loadMovies() async {
+  Future<List<Movie>?> loadMovies() async {
     var queryParameters = {'api_key': 'e23f2c5a356111860c9d95261669df60'};
     var uri =
         Uri.https('api.themoviedb.org', '/3/movie/popular', queryParameters);
