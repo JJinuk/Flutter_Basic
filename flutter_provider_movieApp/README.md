@@ -7,6 +7,7 @@
 
 예시 사진:
 
+![Simulator Screen Shot - iPhone 13 Pro - 2022-01-08 at 17 21 17](https://user-images.githubusercontent.com/74299463/148637399-584ab20f-517b-4c18-bcc7-43901115f121.png)
 
 참고:
 
