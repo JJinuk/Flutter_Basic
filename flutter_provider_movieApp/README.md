@@ -1,16 +1,15 @@
-# flutter_provider
+# Provider를 이용한 Movier app
 
-A new Flutter project.
+## Provider란?
 
-## Getting Started
+설명 어쩌구~~
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+예시 사진:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+참고:
+
+- [[ Flutter / 플러터 ] 단순 숫자 카운트 provider 는 지겹다~! 응용을 해보자 #1](https://youtu.be/Mf9eDfi-VhU)
+- [[ Flutter / 플러터 ] 단순 숫자 카운트 provider 는 지겹다~! 응용을 해보자 #2](https://youtu.be/dkQvARt7pEk)
+
