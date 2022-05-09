@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider/src/provider/bottom_navigation_provider.dart';
-import 'package:flutter_provider/src/provider/count_provider.dart';
 import 'package:flutter_provider/src/ui/count_home_widget.dart';
 import 'package:flutter_provider/src/ui/movie_list_widget.dart';
 import 'package:provider/provider.dart';
@@ -18,10 +17,8 @@ class Home extends StatelessWidget {
       switch (bottomNavigationBar.currentPage) {
         case 0:
           return CountHomeWidget();
-          break;
         case 1:
           return MovieListWidget();
-          break;
       }
       return Container();
     }
